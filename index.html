@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Adventurer’s Codex</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Roboto+Serif:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/Logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#character">Character Creation</a></li>
+        <li><a href="#rules">Rules of Play</a></li>
+        <li><a href="#gear">Gear & World</a></li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Fade-in scroll animation -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faders = document.querySelectorAll(".fade-in");
+
+        const appearOptions = {
+          threshold: 0.2,
+          rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("appear");
+            observer.unobserve(entry.target);
+          });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+          appearOnScroll.observe(fader);
+        });
+      });
+    </script>
+  </head>
+  
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <img src="img/mainPhoto.jpg" alt="Hero Background" class="hero-bg" />
+    <div class="hero-content">
+      <h1>Your Guide to the World of Role-Playing Games</h1>
+      <img src="img/image.png" alt="Dice" class="hero-img" />
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section id="getting-started" class="section dark">
+    <h2>START YOUR RPG JOURNEY!</h2>
+    <p>
+      Roleplaying games (RPGs) let you and your friends step into the roles of heroes in a shared story. Together, you
+      create characters, battle monsters, uncover mysteries, and forge memories that last a lifetime. <br><br>
+      Dungeons & Dragons is the most famous RPG, but it’s just one of many ways to play. Whether you’re new to fantasy
+      adventures or curious about tabletop gaming, The Adventurer’s Codex will guide you step by step.
+    </p>
+    <img src="img/secondPhoto.png" alt="Fantasy Artwork" class="section-img" />
+    <a href="#rules" class="btn">Learn More in Getting Started</a>
+  </section>
+
+  <!-- What Are Roleplaying Games -->
+  <section class="section light">
+    <h2>WHAT ARE ROLEPLAYING GAMES?</h2>
+    <div class="content-row">
+      <img src="img/image-1.png" alt="RPG Illustration" />
+      <div class="text">
+        <p>In roleplaying games, players form an adventuring party that explores fantastic worlds, embarks on quests, and grows stronger over time. One person serves as the Game Master (or Dungeon Master in D&D), who runs the story, controls non-player characters, and sets the challenges.</p>
+        <p>The magic of RPGs is that no two stories are the same. Every roll of the dice and every decision from the players weaves a tale of triumph, tragedy, and laughter you’ll remember long after the game ends.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules of Play -->
+  <section id="rules" class="section dark">
+    <h2>LEARN THE RULES OF PLAY</h2>
+    <p>
+      RPGs use a mix of imagination and dice rolls to decide what happens. The rules explain how skills work, how to
+      fight monsters, how to cast magic, and what conditions affect your hero during an adventure.
+    </p>
+    <img src="img/thirdPhoto.jpg" alt="Rules Background" class="section-img" />
+    <a href="#character" class="btn">Dive into Rules of Play</a>
+  </section>
+
+  <!-- Character Creation -->
+  <section id="character" class="section light">
+    <h2>CREATE YOUR CHARACTER</h2>
+    <div class="content-row reverse">
+      <div class="text">
+        <p>Every adventure begins with a hero of your own making. You’ll decide their race, class, background, and ability
+          scores, shaping not only their skills but also their personality and story.</p>
+        <p>Your character is more than numbers—it’s the role you bring to life at the table.</p>
+      </div>
+      <img src="img/characterSheet.png" alt="Character Sheet" />
+    </div>
+    <a href="#gear" class="btn">Explore the Characters Section</a>
+  </section>
+
+  <!-- Gear and World -->
+  <section id="gear" class="section dark">
+    <h2>EQUIP YOUR HERO, EXPLORE THE WORLD</h2>
+    <div class="content-row">
+      <img src="img/image-4.png" alt="World Map" />
+      <div class="text">
+        <p>Adventurers need more than courage. Weapons, armor, tools, and magic items help you survive dungeons, fight
+          monsters, and claim treasure. Along the way, you’ll discover strange creatures, forgotten realms, and even other
+          planes of existence.</p>
+        <p>The world of RPGs is vast, and part of the joy is exploring it piece by piece.</p>
+      </div>
+    </div>
+    <a href="#reference" class="btn">Visit Gear & World</a>
+  </section>
+
+  <!-- Reference Section -->
+  <section id="reference" class="section light">
+    <h2>QUICK REFERENCE & RESOURCES</h2>
+    <p>Not sure what a term means? Need a beginner’s tip or a link to official resources? The Reference section is here
+      to help. Whether you’re checking what AC means, looking for dice rollers, or reviewing the basics before game
+      night, you’ll always have the answers at hand.</p>
+    <a href="#footer" class="btn">Check the Reference Section</a>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="footer-top"></div>
+    <div class="footer-main">
+      <div class="footer-col">
+        <h3>Quick Navigation</h3>
+        <ul>
+          <li>Home</li>
+          <li>Getting Started</li>
+          <li>Character Creation</li>
+          <li>Rules of Play</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul>
+          <li>Character Sheets</li>
+          <li>Dice Rollers</li>
+          <li>Community Forums</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>About The Codex</h3>
+        <p>Your comprehensive guide to the world of tabletop role-playing games. From first steps to advanced play,
+          we’re here to help you craft epic adventures.</p>
+      </div>
+      <div class="footer-col socials">
+        <h3>Socials</h3>
+        <img src="img/social-media.svg" alt="Social Media Links" />
+      </div>
+    </div>
+    <p class="copyright">© 2024 The Adventurer's Codex. All rights reserved. Designed for adventurers, by adventurers.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 50,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
