@@ -1,0 +1,912 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Serif', serif;
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+  min-width: 1440px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s ease forwards;
+  opacity: 0;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.4s;
+}
+
+.delay-4 {
+  animation-delay: 0.6s;
+}
+
+/* Header */
+.header {
+  position: relative;
+  z-index: 10;
+  background-color: #000000;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  height: 107px;
+  padding: 0 56px;
+  background-color: #000;
+  border-bottom: 2px solid #ff0000; /* red bottom border */
+}
+
+/* Left logo styling */
+.logo-header {
+  grid-column: 1;
+  justify-self: start;
+}
+
+/* Center the navigation evenly */
+.nav {
+  grid-column: 2;
+  display: flex;
+  justify-content: center; /* centers the group */
+  align-items: center;
+  gap: 100px; /* adjust this for spacing between items */
+  list-style: none;
+  padding-bottom: 30px;
+}
+
+.nav-link {
+  font-family: 'Uncial Antiqua', serif;
+  font-weight: 400;
+  color: #a9a9a9;
+  font-size: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  height: 3px;
+  background-color: #ff0000;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 712px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -180;
+  animation: fade-in 1s 0.4s ease forwards;
+  opacity: 0;
+}
+
+.hero-icon {
+  position: relative;
+  z-index: 1;
+  width: 365px;
+  height: auto;
+  margin-bottom: 24px;
+  animation: fade-in 1s 0.6s ease forwards;
+  opacity: 0;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 1;
+  font-family: 'Roboto Serif', serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 59.1px;
+  line-height: normal;
+  text-shadow: 
+    -1.34px -1.34px 0 #000000,
+    1.34px -1.34px 0 #000000,
+    -1.34px 1.34px 0 #000000,
+    1.34px 1.34px 0 #000000;
+  animation: fade-in 1s 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* Section Styles */
+.section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.section::before,
+.section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: -1;
+}
+
+.section::before {
+  top: 0;
+  background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0) 100%);
+}
+
+.section::after {
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%);
+}
+
+.section + .section {
+  margin-top: -50px;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 89px;
+}
+
+.container-wide {
+  position: relative;
+  z-index: 10;
+  max-width: 1385px;
+  margin: 0 auto;
+  padding: 0 90px;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'Uncial Antiqua', serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-title-left {
+  font-family: 'Uncial Antiqua', serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  margin-bottom: 32px;
+}
+
+.section-title-right {
+  font-family: 'Uncial Antiqua', serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: right;
+  margin-bottom: 32px;
+}
+
+/* Section Text */
+.section-text {
+  font-family: 'Roboto Serif', serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: normal;
+  text-align: center;
+  text-shadow: 
+    -1.05px -1.05px 0 #000000,
+    1.05px -1.05px 0 #000000,
+    -1.05px 1.05px 0 #000000,
+    1.05px 1.05px 0 #000000;
+}
+
+.section-text-left {
+  font-family: 'Roboto Serif', serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0.9px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  text-shadow: 
+    -1.27px -1.27px 0 #000000,
+    1.27px -1.27px 0 #000000,
+    -1.27px 1.27px 0 #000000,
+    1.27px 1.27px 0 #000000;
+}
+
+.section-text-center {
+  font-family: 'Roboto Serif', serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0.9px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 539px;
+  margin: 0 auto 24px;
+  text-shadow: 
+    -1.27px -1.27px 0 #000000,
+    1.27px -1.27px 0 #000000,
+    -1.27px 1.27px 0 #000000,
+    1.27px 1.27px 0 #000000;
+}
+
+.section-text-right {
+  font-family: 'Roboto Serif', serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0.9px;
+  line-height: 24px;
+  text-align: right;
+  max-width: 539px;
+  margin-left: auto;
+  margin-bottom: 24px;
+  text-shadow: 
+    -1.27px -1.27px 0 #000000,
+    1.27px -1.27px 0 #000000,
+    -1.27px 1.27px 0 #000000,
+    1.27px 1.27px 0 #000000;
+}
+
+/* Remove box backgrounds from image/text columns */
+.column-left,
+.column-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 30px;
+  background: none; /* Removed the semi-transparent box */
+  border: none;
+  border-radius: 0;
+}
+
+/* Add shadowed box to Gameplay Guide */
+.guide-box {
+  background: rgba(0, 0, 0, 0.6); /* dark translucent background */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px); /* subtle glass-like effect */
+}
+
+/* Remove boxes, borders, and shadows from IMAGES only */
+.content-image {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure the text columns keep their styles */
+.column-left,
+.column-right {
+  background: inherit;
+  border: inherit;
+  box-shadow: inherit;
+}
+
+
+/* Grid Layout */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+/* Text Containers */
+.text-center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Button */
+.btn {
+  background-color: #9c0305;
+  color: #ffffff;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 16px 24px;
+  font-family: 'Roboto Serif', serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.9px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #7a0204;
+}
+
+.btn-group {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+/* Images */
+.full-width-img {
+  width: 100%;
+  height: auto;
+}
+
+.mt-3 {
+  margin-top: 48px;
+}
+
+/* Content Section Styles */
+.content-section {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.section-bg-3 {
+  background-image: url('img/photo2nd.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* === Add top & bottom dark fade to Rules & Character section === */
+.section-bg-3 {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.section-bg-3::before,
+.section-bg-3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 300px; /* adjust fade size */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-bg-3::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent);
+}
+
+.section-bg-3::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+}
+
+
+
+
+
+.section-bg-4 {
+  background-image: url('img/fourthPhoto.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Featured Image Container */
+.featured-image-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* Two Column Layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+/* Reverse the column order */
+.two-column.reverse {
+  grid-template-areas: "left right";
+}
+
+.two-column.reverse .column-left {
+  grid-area: left;
+}
+
+.two-column.reverse .column-right {
+  grid-area: right;
+}
+
+/* Column Styles */
+.column-left,
+.column-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Content Image */
+.content-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Gear Content */
+.gear-content {
+  max-width: 500px;
+}
+
+/* Text Alignment Utilities */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Ensure section titles and text work with new structure */
+.content-section .section-title {
+  font-family: 'Uncial Antiqua', serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.content-section .section-text {
+  font-family: 'Roboto Serif', serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.9px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  text-shadow: 
+    -1.27px -1.27px 0 #000000,
+    1.27px -1.27px 0 #000000,
+    -1.27px 1.27px 0 #000000,
+    1.27px 1.27px 0 #000000;
+}
+
+/* Button adjustments for new layout */
+.gear-content .btn {
+  margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+    background-image: url('../assets/images/img_component_14.svg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px 30px;
+    margin-top: 80px;
+    border-top: 2px solid #9c0305;
+    position: relative;
+    min-height: 400px;
+}
+
+.copyright {
+    font-family: 'Roboto Serif', serif;
+    font-size: 14px;
+    color: #a9a9a9;
+    text-align: right;
+    line-height: 1.6;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    left: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-logo {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.footer-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex: 1;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-title {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-subtitle {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 16px;
+    color: #9c0305;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-link {
+    font-family: 'Roboto Serif', serif;
+    font-size: 14px;
+    color: #a9a9a9;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+    line-height: 1.4;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+.footer-section:nth-child(2) {
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.footer-text {
+    font-family: 'Roboto Serif', serif;
+    font-size: 14px;
+    color: #a9a9a9;
+    line-height: 1.8;
+    max-width: 350px;
+    margin-bottom: 0;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .footer-main {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 60px;
+    }
+    
+    .footer-sections {
+        flex-direction: row;
+        gap: 60px;
+    }
+    
+    .footer-section {
+        flex: 1;
+    }
+    
+    .footer-section:nth-child(2) {
+        flex: 1.5;
+    }
+    
+    .footer-logo {
+        margin: 0;
+    }
+    
+    .footer-text {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .footer-main {
+        flex: 1;
+    }
+    
+    .footer-sections {
+        gap: 80px;
+    }
+    
+    .footer-text {
+        max-width: 400px;
+    }
+    
+    .copyright {
+        text-align: right;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .two-column.reverse {
+    grid-template-areas: none;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .content-section .section-title {
+    font-size: 32px;
+  }
+}
+
+/* Shadow box for Gameplay Guide */
+.shadow-box {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 40px;
+}
+
+/* Remove background and border for image-only columns */
+.no-box {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Applies to all image-only columns across the site */
+.no-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px; /* Matches text box padding */
+  background: none;
+  border: none;
+  height: 100%;
+}
+
+/* Ensures images are nicely scaled and centered */
+.no-box .content-image,
+.no-box img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 8px; /* visually matches text box shape */
+}
+
+/* Make image columns match the text box size and align center */
+#gear-world .no-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px; /* matches text box padding */
+  background: none;
+  border: none;
+  height: 100%;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto 60px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6),
+              0 0 80px rgba(255, 215, 150, 0.15);
+  display: block;
+  transform: scale(0.98);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.video-container:hover {
+  transform: scale(1);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8),
+              0 0 120px rgba(255, 215, 150, 0.25);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Fade-in animation enhancements */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* === Cinematic Section Styling === */
+.section-dark {
+  position: relative;
+  background-color: #000; /* base layer for deep contrast */
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 120px;
+}
+
+.section-dark::before,
+.section-dark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Top vignette fade */
+.section-dark::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 100%);
+}
+
+/* Bottom vignette fade */
+.section-dark::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent 100%);
+}
+
+/* Optional: slight blur over bg for cinematic focus */
+.section-dark .section-bg {
+  filter: brightness(0.7) blur(2px);
+  transform: scale(1.05);
+  transition: filter 1s ease;
+}
+
+.section-dark:hover .section-bg {
+  filter: brightness(0.8) blur(1px);
+}
+
