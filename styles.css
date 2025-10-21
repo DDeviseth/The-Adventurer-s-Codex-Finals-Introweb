@@ -2786,27 +2786,34 @@ img {
     flex-direction: column;
     padding: 60px 10px;
     text-align: center;
+    height: 400px; /* Fixed height for mobile */
   }
 
   .hero-title {
     font-size: 1.5rem;
     margin-top: 20px;
+    padding: 0 15px;
   }
 
   .hero-icon {
-    width: 70%;
-    max-width: 250px;
+    width: 200px; /* Fixed width */
+    max-width: 200px;
     margin: 0 auto;
   }
 
+  .hero-bg {
+    object-fit: cover; /* Prevent stretching */
+    height: 100%;
+  }
+
   .section {
-    padding: 60px 15px;
+    padding: 40px 15px; /* Reduced padding for mobile */
   }
 
   .two-column,
   .grid-2 {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
   }
 
   .section-title,
@@ -2819,43 +2826,68 @@ img {
   .section-text-left {
     font-size: 0.95rem;
     text-align: center;
+    line-height: 1.5;
   }
 
+  /* FIXED IMAGE SIZING FOR MOBILE */
   .full-width-img,
   .content-image {
     width: 100%;
     height: auto;
+    max-width: 100%;
+    object-fit: contain; /* Prevent distortion */
+  }
+
+  /* Specific fixes for section images */
+  .section-bg {
+    object-fit: cover; /* Fill space without stretching */
+    height: 100%;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: 200px; /* Fixed height for featured images */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* Content section images */
+  .content-section .content-image {
+    height: 180px;
+    object-fit: cover;
   }
 
   .btn {
     display: block;
     margin: 20px auto;
     font-size: 1rem;
+    width: 80%; /* Better button sizing */
+    max-width: 200px;
   }
 
-   footer {
+  footer {
     width: 100%;
-    padding: 60px 40px;
-    background-color: #000; /* or keep your current color */
+    padding: 40px 20px; /* Reduced padding */
+    background-color: #000;
     text-align: center;
     overflow: hidden;
   }
 
   .footer-sections {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* two columns on iPad */
-    gap: 40px;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 30px;
     align-items: start;
     justify-content: center;
-    text-align: left;
+    text-align: center;
   }
 
   .footer-section {
-    padding: 10px 20px;
+    padding: 10px 0;
   }
 
   .footer-logo {
-    width: 120px;
+    width: 100px; /* Smaller logo for mobile */
     height: auto;
     margin: 0 auto 20px;
     display: block;
@@ -2886,14 +2918,14 @@ img {
   }
 
   .footer-links a:hover {
-    color: #e0c060; /* optional accent hover */
+    color: #e0c060;
   }
 
   .footer-divider {
     width: 100%;
     height: 1px;
     background-color: #444;
-    margin: 40px 0;
+    margin: 30px 0;
   }
 
   .footer-bottom {
@@ -2906,10 +2938,12 @@ img {
     margin-top: 20px;
     font-size: 0.85rem;
     opacity: 0.6;
+    
   }
   
-    .contact-section {
-    display: block; /* Show on mobile only */
+  /* CONTACT FORM MOBILE STYLES */
+  .contact-section {
+    display: block;
     padding: 30px 20px;
   }
   
@@ -2919,18 +2953,189 @@ img {
   
   .contact-description {
     font-size: 13px;
+    line-height: 1.5;
   }
   
   .form-input,
   .form-textarea {
-    padding: 10px 12px;
-    font-size: 13px;
+    padding: 12px 15px;
+    font-size: 16px; /* Better for mobile touch */
+    max-width: 100%;
   }
   
   .submit-btn {
-    padding: 12px 25px;
-    font-size: 14px;
+    padding: 15px 30px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 200px;
   }
 
+  /* VIDEO CONTAINER MOBILE FIX */
+  .video-container {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+  }
+
+  /* SPECIFIC FIX FOR GEAR & WORLD IMAGES */
+  #gear-world .content-image {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  /* FIX FOR RULES & CHARACTER SECTION */
+  .section-bg-3 .featured-image {
+    height: 180px;
+  }
+
+  /* GUIDE BOX MOBILE FIX */
+  .guide-box {
+    padding: 20px;
+  }
 }
 
+/* =========================================================
+   HAMBURGER MENU STYLES
+   ========================================================= */
+
+/* Hide hamburger on desktop */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 999;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.mobile-nav-link {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 24px;
+    color: #a9a9a9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+    color: #ffffff;
+}
+
+.menu-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Hamburger animation when active */
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* =========================================================
+   MOBILE HAMBURGER MENU
+   ========================================================= */
+
+@media (max-width: 767px) {
+    /* Hide desktop navigation */
+    .nav {
+        display: none;
+    }
+    
+    /* Show hamburger menu */
+    .header-container {
+        justify-content: space-between;
+        padding: 0 20px;
+        height: 80px;
+    }
+    
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    /* Adjust logo size for mobile */
+    .logo-header {
+        max-height: 60px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE-ONLY CONTACT US FOOTER SECTION
+   ========================================================= */
+
+/* Hide Contact Us section by default */
+.footer-section.contact-mobile {
+    display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 767px) {
+    .footer-section.contact-mobile {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-section.contact-mobile .footer-title {
+        margin-bottom: 15px;
+    }
+}
+
+/* Hide on desktop and tablet */
+@media (min-width: 768px) {
+    .footer-section.contact-mobile {
+        display: none;
+    }
+}
