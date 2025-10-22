@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburgerMenu.addEventListener('click', function() {
             mobileMenu.classList.add('active');
             hamburgerMenu.classList.add('active');
-            document.body.style.overflow = 'hidden'; 
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
         });
         
         // Close mobile menu
         menuClose.addEventListener('click', function() {
             mobileMenu.classList.remove('active');
             hamburgerMenu.classList.remove('active');
-            document.body.style.overflow = ''; 
+            document.body.style.overflow = ''; // Re-enable scrolling
         });
         
         // Close menu when clicking on a link
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function() {
                 mobileMenu.classList.remove('active');
                 hamburgerMenu.classList.remove('active');
-                document.body.style.overflow = ''; 
+                document.body.style.overflow = ''; // Re-enable scrolling
             });
         });
         
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (event.target === mobileMenu) {
                 mobileMenu.classList.remove('active');
                 hamburgerMenu.classList.remove('active');
-                document.body.style.overflow = ''; 
+                document.body.style.overflow = ''; // Re-enable scrolling
             }
         });
         
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (event.key === 'Escape') {
                 mobileMenu.classList.remove('active');
                 hamburgerMenu.classList.remove('active');
-                document.body.style.overflow = ''; 
+                document.body.style.overflow = ''; // Re-enable scrolling
             }
         });
     }
