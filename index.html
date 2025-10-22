@@ -26,6 +26,19 @@
       </div>
     </header>
 
+    <!-- Music Player -->
+    <div class="music-player">
+      <button id="musicToggle" class="music-btn">
+        <span class="music-icon">🎵</span>
+        <span class="music-text">Play Music</span>
+      </button>
+      <audio id="backgroundMusic" loop>
+        <source src="audio/background_music.mp3" type="audio/mpeg">
+        <source src="audio/background_music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobileMenu">
         <button class="menu-close" id="menuClose">&times;</button>
