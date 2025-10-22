@@ -10,22 +10,35 @@
     <link rel="stylesheet" href="styles.css">
   </head>
 
-  <body>
+  <body> 
     <!-- Header -->
     <header class="header">
       <div class="header-container">
         <img class="logo logo-header" src="img/logoSmall.png" alt="The Adventurer's Codex Logo" />
         <nav class="nav">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#getting-started" class="nav-link">Getting Started</a>
-          <a href="#character-creation" class="nav-link">Character Creation</a>
-          <a href="#rules-of-play" class="nav-link">Rules of Play</a>
-          <a href="#gear-world" class="nav-link">Gear & World</a>
-          <a href="#reference" class="nav-link">Reference</a>
+          <a href="index.html" target="_blank" class="nav-link">Home</a>
+          <a href="getting_started.html" target="_blank" class="nav-link">Getting Started</a>
+          <a href="character_selection.html" target="_blank" class="nav-link">Character Creation</a>
+          <a href="Rules_of_play.html" target="_blank" class="nav-link">Rules of Play</a>
+          <a href="gear_worlds.html" target="_blank" class="nav-link">Gear & World</a>
+          <a href="reference.html" target="_blank"class="nav-link">Reference</a>
         </nav>
       </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="menu-close" id="menuClose">&times;</button>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="getting_started.html" class="mobile-nav-link">Getting Started</a>
+            <a href="character_selection.html" class="mobile-nav-link">Character Creation</a>
+            <a href="Rules_of_play.html" class="mobile-nav-link">Rules of Play</a>
+            <a href="gear_worlds.html" class="mobile-nav-link">Gear & World</a>
+            <a href="reference.html" class="mobile-nav-link">Reference</a>
+        </nav>
+    </div>
+    
     <div class="divider"></div>
 
     <!-- Hero Section -->
@@ -40,7 +53,7 @@
       <img class="section-bg" src="img/bgImage2.png" alt="Section background" />
 
       <div class="container">
-        <!-- 🎥 Cinematic Video -->
+        <!-- Cinematic Video -->
         <div class="video-container fade-in">
           <iframe
             src="https://www.youtube.com/embed/6Oebyc--Tzc?si=Z2j3ztlNfTQLbyS_"
@@ -87,7 +100,7 @@
 
     <!-- Gameplay Guide Section -->
     <section class="section section-dark">
-      <img class="section-bg" src="img/photo2nd.png" alt="Section background" />
+      <img class="section-bg" src="img/thirdbackground.png" alt="Section background" />
       <div class="container-wide">
         <div class="grid-2">
           <div class="fade-in guide-box">
@@ -98,7 +111,7 @@
             <p class="section-text-left">
               In Dungeons &amp; Dragons, you might play a fierce fighter, a clever rogue, or a spellcasting wizard. Together with your friends, you'll face deadly perils, roll dice to shape outcomes, and create an adventure that belongs to your group alone.
             </p>
-            <button class="btn">Learn More in Getting Started</button>
+            <a href="getting_started.html" class="btn" target="_blank">Learn More in Getting Started</a>
           </div>
           <div class="fade-in delay-2 no-box">
             <img class="full-width-img content-image" src="img/second.png" alt="Gameplay guide illustration" />
@@ -109,32 +122,39 @@
 
 
     <!-- Combined Rules & Character Section -->
+     
     <section class="content-section section-bg-3" id="rules-of-play">
-      <div class="container">
-        <div class="featured-image-container">
-          <img src="img/third.png" alt="Character creation illustration" class="featured-image">
-        </div>
-        <div class="two-column">
-          <div class="column-left ">
-            <h2 class="section-title text-center">LEARN THE RULES OF PLAY</h2>
-            <p class="section-text text-center">
-              RPGs use a mix of imagination and dice rolls to decide what happens. The rules explain how skills work, how to fight monsters, and how to cast magic.
-            </p>
-            <a href="#rules-of-play" class="btn">Dive into Rules of Play</a>
-          </div>
-          <div class="column-right">
-            <h2 class="section-title text-center">CREATE YOUR CHARACTER</h2>
-            <p class="section-text text-center">
-              Every adventure begins with a hero of your own making. You decide their race, class, and background, shaping both their skills and story.
-            </p>
-            <a href="#character-creation" class="btn">Explore the Characters Section</a>
-          </div>
-        </div>
+  <!-- Add the background image here -->
+  <img class="section-bg" src="img/thirdbackground2.png" alt="Section background" />
+  
+  <div class="container">
+    <div class="featured-image-container">
+      <img src="img/third.png" alt="Character creation illustration" class="featured-image">
+    </div>
+    <div class="two-column">
+      <div class="column-left ">
+        <h2 class="section-title text-center">LEARN THE RULES OF PLAY</h2>
+        <p class="section-text text-center">
+          RPGs use a mix of imagination and dice rolls to decide what happens. The rules explain how skills work, how to fight monsters, and how to cast magic.
+        </p>
+        <a href="#rules-of-play" class="btn">Dive into Rules of Play</a>
       </div>
-    </section>
+      <div class="column-right">
+        <h2 class="section-title text-center">CREATE YOUR CHARACTER</h2>
+        <p class="section-text text-center">
+          Every adventure begins with a hero of your own making. You decide their race, class, and background, shaping both their skills and story.
+        </p>
+        <a href="#character-creation" class="btn">Explore the Characters Section</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Gear & World Section (no boxes) -->
-<section class="content-section section-bg-4" id="gear-world">
+  <!-- Gear & World Section (no boxes) -->
+  <section class="content-section section-bg-4" id="gear-world">
+  <!-- Add the background image here -->
+  <img class="section-bg" src="img/fourthPhoto.png" alt="Section background" />
+  
   <div class="container">
     <!-- First Row -->
     <div class="two-column reverse">
@@ -175,8 +195,34 @@
     </div>
   </div>
 </section>
-
-
+  <!-- Add to the Codex Contact Form - Mobile Only -->
+  <section class="contact-section">
+      <div class="contact-container">
+          <h3 class="contact-title">Add to the Codex</h3>
+          <p class="contact-description">
+              Have a recommendation for new content, rules, or creatures? Contribute your knowledge and help fellow adventurers.
+          </p>
+          
+          <form class="contact-form">
+              <div class="form-group">
+                  <label for="adventurer-name" class="form-label">Adventurer's name</label>
+                  <input type="text" id="adventurer-name" class="form-input" placeholder="Adventurer's name">
+              </div>
+              
+              <div class="form-group">
+                  <label for="adventurer-email" class="form-label">Adventurer's Email</label>
+                  <input type="email" id="adventurer-email" class="form-input" placeholder="Adventurer's Email">
+              </div>
+              
+              <div class="form-group">
+                  <label for="adventurer-message" class="form-label">Your Message to the Codex</label>
+                  <textarea id="adventurer-message" class="form-textarea" placeholder="Your Message to the Codex"></textarea>
+              </div>
+              
+              <button type="submit" class="submit-btn">Submit</button>
+          </form>
+      </div>
+  </section>
 
     <!-- Footer -->
     <footer class="footer" id="reference">
@@ -186,12 +232,12 @@
           <div class="footer-sections">
             <div class="footer-section">
               <h3 class="footer-title">Quick Navigation</h3>
-              <a href="#home" class="footer-link">Home</a>
-              <a href="#getting-started" class="footer-link">Getting Started</a>
-              <a href="#character-creation" class="footer-link">Character Creation</a>
-              <a href="#rules-of-play" class="footer-link">Rules of Play</a>
-              <a href="#gear-world" class="footer-link">Gear & World</a>
-              <a href="#reference" class="footer-link">Reference</a>
+              <a href="index.html" class="footer-link">Home</a>
+              <a href="getting_started.html" class="footer-link">Getting Started</a>
+              <a href="character_creation.html" class="footer-link">Character Creation</a>
+              <a href="Rules_of_play.html" class="footer-link">Rules of Play</a>
+              <a href="gear_world.html" class="footer-link">Gear & World</a>
+              <a href="reference.html" class="footer-link">Reference</a>
             </div>
 
             <div class="footer-section">
@@ -219,5 +265,6 @@
       </div>
       <p class="copyright">© 2025 The Adventurer's Codex. All Rights Reserved.</p>
     </footer>
+   <script src="script.js"></script>
   </body>
 </html>
