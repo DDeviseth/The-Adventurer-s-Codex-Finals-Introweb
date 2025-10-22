@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Adventurer's Codex - Reference</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;600&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>The Adventurer's Codex - Your Guide to RPGs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- For different devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="reference-page">
 
   <!-- Header -->
   <header class="header">
-    <div class="header-container">
-      <img class="logo logo-header" src="img/logoSmall.png" alt="The Adventurer's Codex Logo" />
-      <nav class="nav">
+      <div class="header-container">
+        <img class="logo logo-header" src="img/logoSmall.png" alt="The Adventurer's Codex Logo" />
+        <nav class="nav">
           <a href="index.html" class="nav-link">Home</a>
           <a href="getting_started.html" class="nav-link">Getting Started</a>
           <a href="character_selection.html" class="nav-link">Character Creation</a>
@@ -23,9 +30,42 @@
           <a href="gear_worlds.html" class="nav-link">Gear & World</a>
           <a href="reference.html" class="nav-link">Reference</a>
         </nav>
-    </div>
-  </header>
+        <button class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
 
+    <!-- Music Player -->
+    <div class="music-player">
+      <button id="musicToggle" class="music-btn">
+        <span class="music-icon">🎵</span>
+        <span class="music-text">Play Music</span>
+      </button>
+      <audio id="backgroundMusic" loop>
+        <source src="audio/background_music.mp3" type="audio/mpeg">
+        <source src="audio/background_music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="menu-close" id="menuClose">&times;</button>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="getting_started.html" class="mobile-nav-link">Getting Started</a>
+            <a href="character_selection.html" class="mobile-nav-link">Character Creation</a>
+            <a href="Rules_of_play.html" class="mobile-nav-link">Rules of Play</a>
+            <a href="gear_worlds.html" class="mobile-nav-link">Gear & World</a>
+            <a href="reference.html" class="mobile-nav-link">Reference</a>
+        </nav>
+    </div>
+
+  <div class="divider"></div>
+  
   <!-- Hero Section -->
     <section class="hero" id="home">
       <img class="hero-bg" src="img/headerPhoto.png" alt="Hero background" />
