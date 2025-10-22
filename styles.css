@@ -103,7 +103,6 @@ img {
 .divider {
   width: 100%;
   height: 3px;
-  background-color: #ff0000;
 }
 
 /* Hero Section */
@@ -935,6 +934,72 @@ img {
   filter: brightness(0.8) blur(1px);
 }
 
+/* Music Player Styles */
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.music-btn {
+  background: rgba(156, 3, 5, 0.9);
+  border: 1px solid #000000;
+  border-radius: 50px;
+  padding: 12px 20px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.music-btn:hover {
+  background: rgba(156, 3, 5, 1);
+  transform: scale(1.05);
+}
+
+.music-btn.playing {
+  background: rgba(76, 175, 80, 0.9);
+}
+
+.music-icon {
+  font-size: 18px;
+}
+
+.music-text {
+  white-space: nowrap;
+}
+
+/* Mobile styles for music player */
+@media (max-width: 768px) {
+  .music-player {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .music-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  .music-text {
+    display: none;
+  }
+  
+  .music-btn {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+  }
+}
+
+
 /* Getting Started Page Styles */
 .getting-started-page {
   background-color: #000;
@@ -1004,7 +1069,7 @@ img {
 .content-section {
   padding: 80px 0;
   position: relative;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .content-section:first-of-type {
@@ -1136,6 +1201,7 @@ img {
 
 .cta-container {
   margin-top: 40px;
+  text-align: center;
 }
 
 .btn-large {
