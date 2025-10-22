@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <title>The Adventurer's Codex - Character Selection</title>
+    <title>The Adventurer's Codex - Your Guide to RPGs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- For different devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400&family=Uncial+Antiqua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-  </head>
+</head>
 
   <body> 
-    <!-- Header -->
-    <header class="header">
+   <header class="header">
       <div class="header-container">
         <img class="logo logo-header" src="img/logoSmall.png" alt="The Adventurer's Codex Logo" />
         <nav class="nav">
@@ -23,6 +28,11 @@
           <a href="gear_worlds.html" class="nav-link">Gear & World</a>
           <a href="reference.html" class="nav-link">Reference</a>
         </nav>
+        <button class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
@@ -51,11 +61,8 @@
             <a href="reference.html" class="mobile-nav-link">Reference</a>
         </nav>
     </div>
-
-
-    <div class="divider"></div>
-
     
+    <div class="divider"></div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
