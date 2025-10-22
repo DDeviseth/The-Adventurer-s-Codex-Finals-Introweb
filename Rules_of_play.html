@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;600&family=Uncial+Antiqua&display=swap" rel="stylesheet">
 </head>
 <body class="rules-of-play-page">
+
   <!-- Header -->
   <header class="header">
     <div class="header-container">
@@ -25,7 +26,32 @@
     </div>
   </header>
 
-  
+  <!-- Music Player -->
+    <div class="music-player">
+      <button id="musicToggle" class="music-btn">
+        <span class="music-icon">🎵</span>
+        <span class="music-text">Play Music</span>
+      </button>
+      <audio id="backgroundMusic" loop>
+        <source src="audio/background_music.mp3" type="audio/mpeg">
+        <source src="audio/background_music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="menu-close" id="menuClose">&times;</button>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="getting_started.html" class="mobile-nav-link">Getting Started</a>
+            <a href="character_selection.html" class="mobile-nav-link">Character Creation</a>
+            <a href="Rules_of_play.html" class="mobile-nav-link">Rules of Play</a>
+            <a href="gear_worlds.html" class="mobile-nav-link">Gear & World</a>
+            <a href="reference.html" class="mobile-nav-link">Reference</a>
+        </nav>
+    </div>
+
   <div class="divider"></div>
 
   <!-- Hero Section -->
@@ -38,10 +64,12 @@
 
   <!-- Main Content -->
   <main class="rules-content">
- <!-- Background for entire content -->
+
+  <!-- Background for entire content -->
     <div class="content-background">
       <img src="img/page_bg.png" alt="Content Background">
     </div>
+
     <!-- Introduction -->
     <section class="content-section intro-section">
       <div class="container">
@@ -65,8 +93,7 @@
             Skills show what your character is good at. When you try something risky, you roll a d20, add the relevant ability modifier, and sometimes your proficiency bonus if you're trained in that skill.
         </p>
         </div>
-        
-        <!-- Images on left, skills on right -->
+      
         <div class="skills-content-reversed">
         <div class="skills-images-left">
             <img src="img/page4_1st.png" alt="Skills Illustration 1" class="skill-image">
@@ -310,5 +337,6 @@
     </div>
     <p class="copyright">© 2025 The Adventurer's Codex. All Rights Reserved.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
