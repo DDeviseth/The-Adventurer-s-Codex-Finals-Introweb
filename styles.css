@@ -3055,7 +3055,7 @@ img {
   
   .skill-image {
     width: 100%;
-    height: 200px;
+    height: 45vh;
     object-fit: cover;
     border-radius: 8px;
   }
@@ -3627,3 +3627,4 @@ img {
     display: none !important;
   }
 }
+
