@@ -26,7 +26,36 @@
       </div>
     </header>
 
+    <!-- Music Player -->
+    <div class="music-player">
+      <button id="musicToggle" class="music-btn">
+        <span class="music-icon">🎵</span>
+        <span class="music-text">Play Music</span>
+      </button>
+      <audio id="backgroundMusic" loop>
+        <source src="audio/background_music.mp3" type="audio/mpeg">
+        <source src="audio/background_music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="menu-close" id="menuClose">&times;</button>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="getting_started.html" class="mobile-nav-link">Getting Started</a>
+            <a href="character_selection.html" class="mobile-nav-link">Character Creation</a>
+            <a href="Rules_of_play.html" class="mobile-nav-link">Rules of Play</a>
+            <a href="gear_worlds.html" class="mobile-nav-link">Gear & World</a>
+            <a href="reference.html" class="mobile-nav-link">Reference</a>
+        </nav>
+    </div>
+
+
     <div class="divider"></div>
+
+    
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -317,6 +346,7 @@
       </div>
     </div>
     <p class="copyright">© 2025 The Adventurer's Codex. All Rights Reserved.</p>
-  </footer>
-</body>
+   </footer>
+  <script src="script.js"></script>
+ </body>
 </html>
