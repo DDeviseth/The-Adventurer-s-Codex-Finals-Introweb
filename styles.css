@@ -3034,7 +3034,8 @@ img {
     margin: 0;
   }
 
-  /* Skills Section - Stack vertically */
+
+/* Skills Section - Stack vertically */
   .skills-content-reversed {
     display: flex;
     flex-direction: column;
@@ -3079,6 +3080,27 @@ img {
     color: #e0e0e0;
     margin: 0;
     line-height: 1.4;
+  }
+
+  /* Conditions Section - Stack vertically */
+  .conditions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .conditions-images-left {
+    order: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .conditions-list-right {
+    order: 2; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
   /* Conditions Section - Stack vertically */
