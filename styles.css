@@ -158,8 +158,8 @@ img {
 .hero-title {
   position: relative;
   z-index: 1;
-  font-family: 'Roboto Serif', serif;
-  font-weight: 400;
+  font-family: 'Uncial Antiqua', serif;
+  font-weight: bold;
   color: #ffffff;
   font-size: 59.1px;
   line-height: normal;
@@ -220,7 +220,7 @@ img {
 }
 
 .section + .section {
-  margin-top: -50px;
+  margin-top: -10px;
 }
 
 .container {
@@ -2829,6 +2829,7 @@ img {
     line-height: 1.5;
   }
 
+  
   /* FIXED IMAGE SIZING FOR MOBILE */
   .full-width-img,
   .content-image {
@@ -3082,58 +3083,254 @@ img {
 }
 
 /* =========================================================
-   MOBILE HAMBURGER MENU
+   HAMBURGER MENU STYLES - FIXED VISIBILITY
    ========================================================= */
 
+/* Hide hamburger on desktop by default */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8); /* Add background to make lines visible */
+    border: 2px solid #9c0305; /* Add border for visibility */
+    border-radius: 4px;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* =========================================================
+   HAMBURGER MENU - TOP RIGHT POSITIONING
+   ========================================================= */
+
+/* Mobile Header Styles */
 @media (max-width: 767px) {
-    /* Hide desktop navigation */
+    .header-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        height: 80px;
+        background-color: #000000; /* Ensure header has background */
+    }
+    
+    .logo-header {
+        max-height: 60px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+    
+    /* Hamburger Menu - Top Right - MAKE IT VISIBLE */
+    .hamburger-menu {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.9); /* Dark background */
+        border: 2px solid #9c0305; /* Red border */
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+        display: flex !important; /* Force display */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px; /* Slightly larger */
+        height: 40px;
+        padding: 8px;
+    }
+    
+    .hamburger-line {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff !important; /* Force white color */
+        margin: 2px 0;
+        transition: 0.3s;
+        border-radius: 2px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.8); /* Add shadow for contrast */
+    }
+    
+    /* Hide regular navigation on mobile */
     .nav {
         display: none;
     }
     
-    /* Show hamburger menu */
-    .header-container {
-        justify-content: space-between;
-        padding: 0 20px;
-        height: 80px;
-    }
-    
-    .hamburger-menu {
+    /* Mobile Menu Styles */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #000000;
+        z-index: 999;
+        transition: left 0.3s ease;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
-    /* Adjust logo size for mobile */
-    .logo-header {
-        max-height: 60px;
+    .mobile-menu.active {
+        left: 0;
+    }
+    
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .mobile-nav-link {
+        font-family: 'Uncial Antiqua', serif;
+        font-size: 24px;
+        color: #a9a9a9;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        text-transform: uppercase;
+    }
+    
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+        color: #ffffff;
+    }
+    
+    .menu-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    /* Hamburger animation when active */
+    .hamburger-menu.active .hamburger-line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        background-color: #9c0305; /* Change to red when active */
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+        background-color: #9c0305; /* Change to red when active */
     }
 }
 
+/* Show regular navigation on desktop/tablet */
+@media (min-width: 768px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+    
+    .mobile-menu {
+        display: none !important;
+    }
+    
+  
+  }
 
 /* =========================================================
-   MOBILE-ONLY CONTACT US FOOTER SECTION
+   MOBILE FOOTER - LEFT ALIGNED STACK
    ========================================================= */
 
-/* Hide Contact Us section by default */
-.footer-section.contact-mobile {
-    display: none;
-}
-
-/* Show only on mobile */
 @media (max-width: 767px) {
+    .footer {
+        padding: 40px 20px 20px;
+        margin-top: 40px;
+        text-align: left;
+    }
+    
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .footer-main {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .footer-logo {
+        display: none; /* Hide logo on mobile if you want */
+    }
+    
+    .footer-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    
+    .footer-section {
+        text-align: left;
+        padding: 25px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-section:last-child {
+        border-bottom: none;
+    }
+    
+    .footer-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    .footer-text {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+        max-width: none;
+    }
+    
+    .footer-link {
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: left;
+        display: block;
+    }
+    
+    /* Contact Us section specific */
     .footer-section.contact-mobile {
         display: block;
-        text-align: center;
-        margin-top: 20px;
-        padding-top: 20px;
+        text-align: left;
+        margin-top: 0;
+        padding-top: 25px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    .footer-section.contact-mobile .footer-title {
-        margin-bottom: 15px;
+    .copyright {
+        margin-top: 30px;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .copyright-brand {
+        font-size: 14px;
     }
 }
 
-/* Hide on desktop and tablet */
+/* Hide contact section on desktop */
 @media (min-width: 768px) {
     .footer-section.contact-mobile {
         display: none;
