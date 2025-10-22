@@ -2804,8 +2804,9 @@ img {
     object-position: left center; 
     height: 100%;
     width: 100%;
-    opacity: 1; 
+    opacity: 100%; 
   }
+  
   
   .hero .hero-bg {
     height: 100%;
@@ -2815,6 +2816,7 @@ img {
   .section .section-bg {
     object-position: left center;
     min-height: 100vh; 
+    opacity: 100%; 
   }
 
   .hero-title {
@@ -2887,7 +2889,7 @@ img {
     font-size: 16px;
     line-height: 1.6;
     text-align: left;
-    margin: 20px 10px;
+    margin: 20px 0px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8); 
   }
 
@@ -2895,6 +2897,7 @@ img {
   .section-text-right {
     text-align: left; 
     padding: 5px 5px;
+    margin: 20px 0px;
   }
 
   .full-width-img,
@@ -3144,51 +3147,54 @@ img {
 
 
   /* Combat Section - Stack vertically */
-  .combat-content {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .combat-images {
-    order: 1; 
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .combat-steps {
-    order: 2; 
-  }
-  
-  .combat-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .combat-step {
-    background: rgba(0, 0, 0, 0.6);
-    border-left: 4px solid #9c0305;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-  }
-  
-  .combat-step-title {
-    font-family: 'Uncial Antiqua', serif;
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-bottom: 8px;
-  }
-  
-  .combat-step-desc {
-    font-size: 14px;
-    color: #e0e0e0;
-    margin: 0;
-    line-height: 1.4;
-  }
+.combat-content-centered {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.combat-steps-centered {
+  order: 2; /* Steps come after images */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.combat-images-centered {
+  order: 1; /* Images come first */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.combat-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.combat-step {
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 4px solid #9c0305;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.step-title {
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.4;
+}
 
   /* Magic Section - Stack vertically */
   .magic-content {
@@ -3314,6 +3320,186 @@ img {
     height: 200px;
     margin: 20px 0;
   }
+
+  /* Races Section - Stack vertically */
+.races-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.races-images-centered {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.races-list-centered {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.race-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.race-item-centered {
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 4px solid #9c0305;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.race-name {
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.race-desc {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Classes Section - Stack vertically */
+.classes-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.classes-images-row {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.classes-grid-centered {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.class-column-centered {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.class-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.class-item {
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 4px solid #9c0305;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.class-name {
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.class-desc {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Abilities Section - Stack vertically */
+.abilities-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.abilities-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.abilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ability-item {
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 4px solid #9c0305;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.ability-name {
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.ability-desc {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Backgrounds Section - Stack vertically */
+.backgrounds-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.backgrounds-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.background-item {
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 4px solid #9c0305;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.background-name {
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.background-desc {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+
 }
 
 /* Contact Form - Mobile Only */
