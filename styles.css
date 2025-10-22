@@ -56,20 +56,20 @@ img {
 }
 
 .header-container {
-  display: flex; /* simpler and more flexible than grid for this case */
+  display: flex; 
   align-items: center;
   justify-content: space-between;
   height: 120px;
   padding: 0 26px;
   background-color: #000;
-  border-bottom: 2px solid #ff0000; /* red bottom border */
+  border-bottom: 2px solid #ff0000; 
 }
 
 /* Logo at the left, keep natural image size */
 .logo-header {
   height: auto;
   width: auto;
-  max-height: 100px; /* control how tall it gets */
+  max-height: 100px; 
   object-fit: contain;
 }
 
@@ -78,7 +78,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px; /* adjust spacing */
+  gap: 80px; 
   list-style: none;
   padding: 0;
   margin: 0;
@@ -190,12 +190,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: fill; /* Allows stretching */
+  object-fit: fill; 
   object-position: center;
   z-index: -2;
   opacity: 0.9;
   pointer-events: none;
-  transform: scale(1.05); /* Subtle stretch for all sections */
+  transform: scale(1.05); 
 }
 
 .section::before,
@@ -338,19 +338,19 @@ img {
   justify-content: flex-start;
   height: 100%;
   padding: 30px;
-  background: none; /* Removed the semi-transparent box */
+  background: none; 
   border: none;
   border-radius: 0;
 }
 
 /* Add shadowed box to Gameplay Guide */
 .guide-box {
-  background: rgba(0, 0, 0, 0.6); /* dark translucent background */
+  background: rgba(0, 0, 0, 0.6); 
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   padding: 40px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px); /* subtle glass-like effect */
+  backdrop-filter: blur(4px); 
 }
 
 /* Remove boxes, borders, and shadows from IMAGES only */
@@ -590,7 +590,7 @@ img {
     background-size: cover;
     background-position: center;
     padding: 60px 20px 30px;
-    margin-top: 80px;
+    margin-top: auto;
     border-top: 2px solid #9c0305;
     position: relative;
     min-height: 400px;
@@ -608,6 +608,7 @@ img {
     left: 20px;
     padding-top: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
 }
 
 .footer-content {
@@ -798,25 +799,22 @@ img {
   padding: 40px;
 }
 
-/* Remove background and border for image-only columns */
 .no-box {
   background: none !important;
   border: none !important;
   padding: 0 !important;
 }
 
-/* Applies to all image-only columns across the site */
 .no-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px; /* Matches text box padding */
+  padding: 30px; 
   background: none;
   border: none;
   height: 100%;
 }
 
-/* Ensures images are nicely scaled and centered */
 .no-box .content-image,
 .no-box img {
   width: 100%;
@@ -826,12 +824,12 @@ img {
   border-radius: 8px; 
 }
 
-/* Make image columns match the text box size and align center */
+
 #gear-world .no-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px; /* matches text box padding */
+  padding: 30px; 
   background: none;
   border: none;
   height: 100%;
@@ -1107,6 +1105,7 @@ img {
   font-size: 36px;
   color: #ffffff;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .dice-content {
@@ -1240,8 +1239,8 @@ img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  filter: none; /* Remove any filters */
-  box-shadow: none; /* Remove shadows */
+  filter: none; 
+  box-shadow: none; 
 }
 
 /* Remove any gradients or overlays */
@@ -1290,7 +1289,7 @@ img {
   padding: 15px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
-  max-width: 600px; /* Optional: limits width for better centering */
+  max-width: 600px; 
 }
 
 .dice-name {
@@ -1648,7 +1647,7 @@ img {
 }
 
 .classes-images-row {
-  display: block; /* Change from grid to block */
+  display: block; 
   margin-top: 50px;
   width: 100%;
   height: auto;
@@ -1680,13 +1679,13 @@ img {
   position: relative;
 }
 
-/* Skills Section */
+
 /* Skills Section with images on left */
 .skills-content-reversed {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: stretch; /* This makes both columns equal height */
+  align-items: stretch; 
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -1696,13 +1695,13 @@ img {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  height: 100%; /* Fill the grid height */
+  height: 100%; 
 }
 
 .skill-image {
   width: 100%;
-  height: 100%; /* Fill the container height */
-  object-fit: cover; /* This ensures images fill the space without distortion */
+  height: 100%; 
+  object-fit: cover; 
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.6);
 }
@@ -1711,7 +1710,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 100%; /* Fill the grid height */
+  height: 100%; 
 }
 
 .skill-category {
@@ -1720,10 +1719,10 @@ img {
   border-radius: 8px;
   border-left: 4px solid #9c0305;
   text-align: left;
-  flex: 1; /* This makes each category equal height */
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
+  justify-content: center; 
 }
 
 .skill-category-title {
@@ -1983,7 +1982,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: stretch; /* Makes both columns equal height */
+  align-items: stretch; 
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -1993,7 +1992,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 100%; /* Fill the grid height */
+  height: 100%; 
 }
 
 .combat-step {
@@ -2002,11 +2001,11 @@ img {
   border-radius: 8px;
   border-left: 4px solid #9c0305;
   text-align: left;
-  flex: 1; /* Makes each step equal height */
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  min-height: 120px; /* Minimum height for consistency */
+  justify-content: center; 
+  min-height: 120px; 
 }
 
 .step-title {
@@ -2025,13 +2024,13 @@ img {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  height: 100%; /* Fill the grid height */
+  height: 100%; 
 }
 
 .combat-image {
   width: 100%;
-  height: 100%; /* Fill the container height */
-  object-fit: cover; /* Fill space without distortion */
+  height: 100%; 
+  object-fit: cover; 
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.6);
 }
@@ -2145,7 +2144,7 @@ img {
   box-shadow: 0 8px 32px rgba(0,0,0,0.6);
 }
 
-/* Monsters Section - Images on top */
+/* Monsters Section */
 .monsters-images-top {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2195,7 +2194,6 @@ img {
   margin: 0;
 }
 
-/* Remove the old monsters-images styles */
 .monsters-images {
   display: none;
 }
@@ -2245,7 +2243,7 @@ img {
   font-size: 18px;
 }
 
-/* Weapons Section - Stacked Layout with Large Images */
+/* Weapons Section */
 .weapons-properties-stacked {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2260,7 +2258,7 @@ img {
   border-radius: 8px;
   border-left: 4px solid #9c0305;
   text-align: left;
-  min-height: 80px; /* Smaller height for properties */
+  min-height: 80px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2291,7 +2289,7 @@ img {
 
 .weapon-image-stacked {
   width: 100%;
-  height: 300px; /* Much larger height for images */
+  height: 300px; 
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.6);
@@ -2321,7 +2319,7 @@ img {
 }
 /* Darken the tools containers specifically */
 .tools-section {
-  background: rgba(0, 0, 0, 0.6); /* Add dark overlay */
+  background: rgba(0, 0, 0, 0.3); 
   padding: 40px;
   border-radius: 12px;
   margin: 0px 0;
@@ -2340,7 +2338,6 @@ img {
   font-size: 14px;
 }
 
-/* Update all grid items to match Quick Reference style */
 .terms-grid,
 .tips-grid,
 .resources-grid {
@@ -2350,7 +2347,6 @@ img {
   margin-top: 40px;
 }
 
-/* Update all items to match ref-item style */
 .term-item,
 .tip-item,
 .resource-item {
@@ -2360,21 +2356,19 @@ img {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  border-left: none; /* Remove the border-left */
+  border-left: none; 
 }
 
-/* Update all names to match ref-name style */
 .term-name,
 .tip-name,
 .resource-name {
   font-weight: 600;
   color: #9c0305;
   font-size: 14px;
-  margin-bottom: 0; /* Remove margin since we're using gap */
-  font-family: 'Roboto Serif', serif; /* Use same font as ref-name */
+  margin-bottom: 0; 
+  font-family: 'Roboto Serif', serif; 
 }
 
-/* Update all descriptions to match ref-desc style */
 .term-desc,
 .tip-desc,
 .resource-desc {
@@ -2413,108 +2407,8 @@ img {
   margin: 0;
 }
 
-.contact-section {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 40px 20px;
-    margin-top: 40px;
-    border-top: 1px solid #9c0305;
-    border-bottom: 1px solid #9c0305;
-    display: none; /* Hidden by default */
-}
 
-.contact-container {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-title {
-    font-family: 'Uncial Antiqua', serif;
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.contact-description {
-    font-family: 'Roboto Serif', serif;
-    font-size: 14px;
-    color: #a9a9a9;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    text-align: left;
-}
-
-.form-label {
-    display: block;
-    font-family: 'Roboto Serif', serif;
-    font-size: 14px;
-    color: #ffffff;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.form-input,
-.form-textarea {
-    width: 100%;
-    padding: 12px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 6px;
-    color: #ffffff;
-    font-family: 'Roboto Serif', serif;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.form-input:focus,
-.form-textarea:focus {
-    outline: none;
-    border-color: #9c0305;
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.form-textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.form-input::placeholder,
-.form-textarea::placeholder {
-    color: #888;
-}
-
-.submit-btn {
-    background-color: #9c0305;
-    color: #ffffff;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 15px 30px;
-    font-family: 'Roboto Serif', serif;
-    font-weight: 400;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 6px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 10px;
-}
-
-.submit-btn:hover {
-    background-color: #7a0204;
-}
-
-/* ----- TABLET / iPad Pro (768px–1366px) ----- */
+/* TABLET / iPad Pro  */
 @media (max-width: 1366px) and (min-width: 768px) {
 
   body {
@@ -2525,14 +2419,14 @@ img {
   /* Header layout: logo left, nav right */
   .header-container {
     display: flex;
-    justify-content: space-between; /* logo left, nav right */
+    justify-content: space-between; 
     align-items: center;
     padding: 20px 40px;
     text-align: left;
   }
 
   .header-logo {
-    width: 120px; /* smaller logo for tablet */
+    width: 120px; 
     height: auto;
   }
 
@@ -2592,9 +2486,7 @@ img {
     font-size: 1rem;
     text-align: center;
   }
-/* =========================================================
-   FOOTER - FIXED ABOUT SECTION
-   ========================================================= */
+/* FOOTER  */
 
 .footer {
     background-color: #000000;
@@ -2608,7 +2500,7 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.2fr 1.5fr 1fr; /* Adjusted ratios */
+    grid-template-columns: 1.2fr 1.5fr 1fr; 
     gap: 50px;
     align-items: start;
 }
@@ -2643,7 +2535,7 @@ img {
 
 /* ABOUT SECTION SPECIFIC FIXES */
 .footer-about {
-    padding-right: 20px; /* Add some breathing room */
+    padding-right: 20px; 
 }
 
 .footer-text {
@@ -2652,20 +2544,17 @@ img {
     color: #a9a9a9;
     line-height: 1.6;
     margin-bottom: 0;
-    /* Allow text to wrap properly */
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
 }
 
-/* Remove borders from about section for now */
 .footer-section:nth-child(2) {
     border-left: none;
     border-right: none;
     padding: 0;
 }
 
-/* Resources & Socials */
 .footer-resources {
     display: flex;
     flex-direction: column;
@@ -2692,9 +2581,7 @@ img {
     margin-bottom: 8px;
 }
 
-/* =========================================================
-   TABLET FOOTER FIXES (768px - 1366px)
-   ========================================================= */
+/* TABLET FOOTER FIXES  */
 
 @media (max-width: 1366px) and (min-width: 768px) {
     .footer {
@@ -2721,9 +2608,7 @@ img {
     }
 }
 
-/* =========================================================
-   MOBILE FOOTER FIXES (below 768px)
-   ========================================================= */
+/* MOBILE FOOTER FIXES */
 
 @media (max-width: 767px) {
     .footer {
@@ -2766,28 +2651,16 @@ img {
     }
 }
 
-/* =========================================================
-   SPECIFIC FIX FOR TEXT CUTOFF
-   ========================================================= */
-
-/* Ensure text containers don't restrict content */
-/* =========================================================
-   SPECIFIC FIX FOR TEXT CUTOFF - WITH PROPER CONSTRAINTS
-   ========================================================= */
-
-/* Ensure text containers don't restrict content but still have limits */
 .footer-section {
-    min-width: 0; /* Prevents flex/grid items from overflowing */
+    min-width: 0; 
 }
 
 .footer-text {
-    max-width: 280px; /* Reasonable max-width for desktop */
-    min-height: auto; /* Allow natural height */
+    max-width: 280px; 
+    min-height: auto; 
 }
 
-/* =========================================================
-   TABLET FOOTER FIXES (768px - 1366px) - UPDATED
-   ========================================================= */
+/* TABLET FOOTER FIXES  */
 
 @media (max-width: 1366px) and (min-width: 768px) {
     .footer {
@@ -2804,17 +2677,16 @@ img {
         grid-column: 1 / -1;
         padding-right: 0;
         text-align: center;
-        max-width: 500px; /* Constrain on tablet */
+        max-width: 500px; 
         margin: 0 auto;
     }
     
     .footer-text {
-        max-width: none; /* Allow full width within the constrained container */
+        max-width: none; 
         font-size: 15px;
         line-height: 1.7;
     }
     
-    /* Keep other sections constrained */
     .footer-section:not(.footer-about) .footer-text {
         max-width: 200px;
         margin: 0 auto;
@@ -2824,581 +2696,706 @@ img {
 }
 
 
-/* ----- MOBILE (iPhone 13 / 14 and smaller, below 768px) ----- */
+/* MOBILE */
 @media (max-width: 767px) {
-
   body {
     min-width: 0;
     overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   .header-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 15px 20px;
+    height: 70px;
+    position: relative;
+
   }
 
+  .logo-header {
+    max-height: 50px;
+    width: auto;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Hide desktop navigation */
   .nav {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+    display: none;
   }
 
-  .nav-link {
-    font-size: 1rem;
+  /* Hamburger Menu  */
+  .hamburger-menu {
+    display: flex !important;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #9c0305;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff !important;
+    margin: 2px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+    display: block;
+  }
+
+  /* Hamburger animation */
+  .hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
   }
 
   .hero {
-    flex-direction: column;
-    padding: 60px 10px;
-    text-align: center;
-    height: 400px; /* Fixed height for mobile */
+    padding: 60px 20px;
+    height: 400px;
+    position: relative;
+  }
+
+  .hero-bg,
+  .section-bg {
+    object-fit: cover;
+    object-position: left center; 
+    height: 100%;
+    width: 100%;
+    opacity: 1; 
+  }
+  
+  .hero .hero-bg {
+    height: 100%;
+    object-position: center center; 
+  }
+  
+  .section .section-bg {
+    object-position: left center;
+    min-height: 100vh; 
   }
 
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-top: 20px;
-    padding: 0 15px;
+    padding: 0 10px;
+    line-height: 1.3;
+    text-align: center; 
   }
 
   .hero-icon {
-    width: 200px; /* Fixed width */
-    max-width: 200px;
-    margin: 0 auto;
-  }
-
-  .hero-bg {
-    object-fit: cover; /* Prevent stretching */
-    height: 100%;
+    width: 150px;
+    margin: 0 auto 20px auto; 
+    align-self: center; 
+    display: block;
   }
 
   .section {
-    padding: 40px 15px; /* Reduced padding for mobile */
+    padding: 40px 20px;
+    min-height: auto;
+    position: relative;
+    text-align: left; 
   }
 
-  .two-column,
-  .grid-2 {
-    flex-direction: column;
+  .container-wide {
+  position: relative;
+  z-index: 10;
+  max-width: 1385px;
+  margin: 0 auto;
+  padding: 0px;
+  }
+
+  .column-left,
+  .column-right,
+  .guide-box,
+  .gear-content {
+    background: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; 
+  }
+
+  .grid-2,
+  .two-column {
+    grid-template-columns: 1fr;
     gap: 30px;
+    display: flex;
+    flex-direction: column;
   }
 
   .section-title,
   .section-title-left {
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .section-title-right,
+  .section-title.text-center {
+    text-align: left; 
+    margin: 20px 10px;
   }
 
   .section-text,
   .section-text-left {
-    font-size: 0.95rem;
-    text-align: center;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    margin: 20px 0px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8); 
   }
 
-  
-  /* FIXED IMAGE SIZING FOR MOBILE */
+  .section-text-center,
+  .section-text-right {
+    text-align: left; 
+    padding: 5px 5px;
+  }
+
   .full-width-img,
   .content-image {
     width: 100%;
-    height: auto;
-    max-width: 100%;
-    object-fit: contain; /* Prevent distortion */
-  }
+    height: 35vh;
+    object-fit: fill;
+    object-position: center; 
+    border-radius: 8px;
+    margin: 20px 0;
 
-  /* Specific fixes for section images */
-  .section-bg {
-    object-fit: cover; /* Fill space without stretching */
-    height: 100%;
+
+    
   }
 
   .featured-image {
     width: 100%;
-    height: 200px; /* Fixed height for featured images */
+    height: 200px;
     object-fit: cover;
+    object-position: left center;
     border-radius: 8px;
   }
 
-  /* Content section images */
-  .content-section .content-image {
-    height: 180px;
-    object-fit: cover;
-  }
-
   .btn {
-    display: block;
-    margin: 20px auto;
-    font-size: 1rem;
-    width: 80%; /* Better button sizing */
-    max-width: 200px;
+    display: inline-block;
+    width: auto;
+    max-width: 280px;
+    margin: 20px 0;
+    padding: 10px 10px;
+    font-size: 16px;
+    text-align: left;
   }
 
+  .btn-group {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start; 
+  }
+
+  /* Footer improvements */
   footer {
-    width: 100%;
-    padding: 40px 20px; /* Reduced padding */
-    background-color: #000;
-    text-align: center;
-    overflow: hidden;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+    background: #000;
+    text-align: left; 
+    position: relative;
   }
 
   .footer-sections {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 30px;
-    align-items: start;
-    justify-content: center;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: left;
   }
 
   .footer-section {
-    padding: 10px 0;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
   }
 
-  .footer-logo {
-    width: 100px; /* Smaller logo for mobile */
-    height: auto;
-    margin: 0 auto 20px;
-    display: block;
+  .footer-section:last-child {
+    border-bottom: none;
   }
 
-  .footer-section h3,
-  .footer-section h4 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+  .footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: left;
   }
 
-  .footer-section p,
-  .footer-section li,
-  .footer-section a {
-    font-size: 0.95rem;
+  .footer-text,
+  .footer-link {
+    font-size: 14px;
     line-height: 1.6;
+    text-align: left;
   }
 
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .footer-links a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .footer-links a:hover {
-    color: #e0c060;
-  }
-
-  .footer-divider {
-    width: 100%;
-    height: 1px;
-    background-color: #444;
-    margin: 30px 0;
-  }
-
-  .footer-bottom {
-    text-align: center;
-    font-size: 0.9rem;
-    opacity: 0.8;
+  .footer-link {
+    display: block;
+    margin-bottom: 8px;
   }
 
   .copyright {
-    margin-top: 20px;
-    font-size: 0.85rem;
-    opacity: 0.6;
-    
-  }
-  
-  /* CONTACT FORM MOBILE STYLES */
-  .contact-section {
-    display: block;
-    padding: 30px 20px;
-  }
-  
-  .contact-title {
-    font-size: 20px;
-  }
-  
-  .contact-description {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-  
-  .form-input,
-  .form-textarea {
-    padding: 12px 15px;
-    font-size: 16px; /* Better for mobile touch */
-    max-width: 100%;
-  }
-  
-  .submit-btn {
-    padding: 15px 30px;
-    font-size: 16px;
-    width: 100%;
-    max-width: 200px;
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center; 
+    opacity: 0.8;
   }
 
-  /* VIDEO CONTAINER MOBILE FIX */
-  .video-container {
+  .container {
+  position: relative;
+  z-index: 10;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0px;
+  }
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px; 
+    padding: 20px 0;
+}
+
+.class-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(156, 3, 5, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.class-card:hover {
+    transform: translateY(-2px);
+    border-color: #9c0305;
+}
+
+.class-name {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(156, 3, 5, 0.5);
+    padding-bottom: 8px;
+}
+
+.class-description {
+    font-family: 'Roboto Serif', serif;
+    font-size: 14px;
+    color: #e0e0e0;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Skills Section - Stack vertically */
+  .skills-content-reversed {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .skills-images-left {
+    order: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .skills-list-right {
+    order: 2; 
+  }
+  
+  .skill-image {
     width: 100%;
     height: 200px;
-    margin-bottom: 30px;
-  }
-
-  /* SPECIFIC FIX FOR GEAR & WORLD IMAGES */
-  #gear-world .content-image {
-    height: 150px;
     object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .skill-category {
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 4px solid #9c0305;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+  }
+  
+  .skill-category-title {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  
+  .skill-desc {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin: 0;
+    line-height: 1.4;
   }
 
-  /* FIX FOR RULES & CHARACTER SECTION */
-  .section-bg-3 .featured-image {
-    height: 180px;
-  }
-
-  /* GUIDE BOX MOBILE FIX */
-  .guide-box {
-    padding: 20px;
-  }
-}
-
-/* =========================================================
-   HAMBURGER MENU STYLES
-   ========================================================= */
-
-/* Hide hamburger on desktop */
-.hamburger-menu {
-    display: none;
+  /* Conditions Section - Stack vertically */
+  .conditions-content {
+    display: flex;
     flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1000;
-}
+    gap: 30px;
+  }
+  
+  .conditions-images-left {
+    order: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .conditions-list-right {
+    order: 2; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .condition-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Stack condition items on top of each other */
+  .conditions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Stack condition items vertically */
+  .conditions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .condition-item {
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 4px solid #9c0305;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .condition-name {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  
+  .condition-desc {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin: 0;
+    line-height: 1.4;
+  }
 
-.hamburger-line {
-    width: 25px;
-    height: 2px;
-    background-color: #ffffff;
-    margin: 3px 0;
-    transition: 0.3s;
-}
 
-/* Mobile menu styles */
-.mobile-menu {
+  /* Combat Section - Stack vertically */
+  .combat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .combat-images {
+    order: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .combat-steps {
+    order: 2; 
+  }
+  
+  .combat-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .combat-step {
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 4px solid #9c0305;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+  }
+  
+  .combat-step-title {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  
+  .combat-step-desc {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* Magic Section - Stack vertically */
+  .magic-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .magic-images {
+    order: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .magic-info {
+    order: 2; 
+  }
+  
+  .magic-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .magic-item {
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 4px solid #9c0305;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+  }
+  
+  .magic-item-title {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  
+  .magic-item-desc {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+
+  /* Mobile menu styles */
+  .mobile-menu {
     position: fixed;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #000000;
+    background: #000;
     z-index: 999;
     transition: left 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-
-.mobile-menu.active {
-    left: 0;
-}
-
-.mobile-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-}
-
-.mobile-nav-link {
-    font-family: 'Uncial Antiqua', serif;
-    font-size: 24px;
-    color: #a9a9a9;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-}
-
-.mobile-nav-link:hover,
-.mobile-nav-link.active {
-    color: #ffffff;
-}
-
-.menu-close {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-/* Hamburger animation when active */
-.hamburger-menu.active .hamburger-line:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger-menu.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.active .hamburger-line:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-/* =========================================================
-   HAMBURGER MENU STYLES - FIXED VISIBILITY
-   ========================================================= */
-
-/* Hide hamburger on desktop by default */
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.8); /* Add background to make lines visible */
-    border: 2px solid #9c0305; /* Add border for visibility */
-    border-radius: 4px;
-}
-
-.hamburger-line {
-    width: 25px;
-    height: 2px;
-    background-color: #ffffff;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-/* =========================================================
-   HAMBURGER MENU - TOP RIGHT POSITIONING
-   ========================================================= */
-
-/* Mobile Header Styles */
-@media (max-width: 767px) {
-    .header-container {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-        height: 80px;
-        background-color: #000000; /* Ensure header has background */
-    }
-    
-    .logo-header {
-        max-height: 60px;
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1001;
-    }
-    
-    /* Hamburger Menu - Top Right - MAKE IT VISIBLE */
-    .hamburger-menu {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.9); /* Dark background */
-        border: 2px solid #9c0305; /* Red border */
-        border-radius: 5px;
-        cursor: pointer;
-        z-index: 1000;
-        display: flex !important; /* Force display */
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 40px; /* Slightly larger */
-        height: 40px;
-        padding: 8px;
-    }
-    
-    .hamburger-line {
-        width: 25px;
-        height: 3px;
-        background-color: #ffffff !important; /* Force white color */
-        margin: 2px 0;
-        transition: 0.3s;
-        border-radius: 2px;
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.8); /* Add shadow for contrast */
-    }
-    
-    /* Hide regular navigation on mobile */
-    .nav {
-        display: none;
-    }
-    
-    /* Mobile Menu Styles */
-    .mobile-menu {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: #000000;
-        z-index: 999;
-        transition: left 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .mobile-menu.active {
-        left: 0;
-    }
-    
-    .mobile-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-    
-    .mobile-nav-link {
-        font-family: 'Uncial Antiqua', serif;
-        font-size: 24px;
-        color: #a9a9a9;
-        text-decoration: none;
-        transition: color 0.3s ease;
-        text-transform: uppercase;
-    }
-    
-    .mobile-nav-link:hover,
-    .mobile-nav-link.active {
-        color: #ffffff;
-    }
-    
-    .menu-close {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        background: none;
-        border: none;
-        color: #ffffff;
-        font-size: 30px;
-        cursor: pointer;
-        z-index: 1001;
-    }
-    /* Hamburger animation when active */
-    .hamburger-menu.active .hamburger-line:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-        background-color: #9c0305; /* Change to red when active */
-    }
-    
-    .hamburger-menu.active .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger-menu.active .hamburger-line:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-        background-color: #9c0305; /* Change to red when active */
-    }
-}
-
-/* Show regular navigation on desktop/tablet */
-@media (min-width: 768px) {
-    .hamburger-menu {
-        display: none !important;
-    }
-    
-    .mobile-menu {
-        display: none !important;
-    }
-    
-  
+    align-items: flex-start; 
+    padding: 0 40px;
   }
 
-/* =========================================================
-   MOBILE FOOTER - LEFT ALIGNED STACK
-   ========================================================= */
+  .mobile-menu.active {
+    left: 0;
+  }
 
-@media (max-width: 767px) {
-    .footer {
-        padding: 40px 20px 20px;
-        margin-top: 40px;
-        text-align: left;
-    }
-    
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    .footer-main {
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    .footer-logo {
-        display: none; /* Hide logo on mobile if you want */
-    }
-    
-    .footer-sections {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        width: 100%;
-    }
-    
-    .footer-section {
-        text-align: left;
-        padding: 25px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .footer-section:last-child {
-        border-bottom: none;
-    }
-    
-    .footer-title {
-        font-size: 16px;
-        margin-bottom: 15px;
-        text-align: left;
-    }
-    
-    .footer-text {
-        font-size: 14px;
-        line-height: 1.6;
-        text-align: left;
-        max-width: none;
-    }
-    
-    .footer-link {
-        font-size: 14px;
-        margin-bottom: 10px;
-        text-align: left;
-        display: block;
-    }
-    
-    /* Contact Us section specific */
-    .footer-section.contact-mobile {
-        display: block;
-        text-align: left;
-        margin-top: 0;
-        padding-top: 25px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .copyright {
-        margin-top: 30px;
-        font-size: 12px;
-        text-align: center;
-    }
-    
-    .copyright-brand {
-        font-size: 14px;
-    }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .mobile-nav-link {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 1.4rem;
+    color: #a9a9a9;
+    text-decoration: none;
+    text-align: left;
+  }
+
+  .mobile-nav-link:hover {
+    color: #fff;
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* Content sections with background images */
+  .content-section {
+    position: relative;
+    padding: 40px 20px;
+  }
+
+  .content-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  /* Video container for mobile */
+  .video-container {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+  }
 }
 
-/* Hide contact section on desktop */
+/* Contact Form - Mobile Only */
+.contact-section {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px 20px;
+  border-top: 2px solid #9c0305;
+  margin-top: 40px;
+}
+
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-family: 'Roboto Serif', serif;
+  font-size: 14px;
+  color: #e0e0e0;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-family: 'Roboto Serif', serif;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'Roboto Serif', serif;
+  font-size: 14px;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #a9a9a9;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #9c0305;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  background: #9c0305;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #7a0204;
+}
+
 @media (min-width: 768px) {
-    .footer-section.contact-mobile {
-        display: none;
-    }
+  .hamburger-menu {
+    display: none !important;
+  }
+  
+  .mobile-menu {
+    display: none !important;
+  }
 }
